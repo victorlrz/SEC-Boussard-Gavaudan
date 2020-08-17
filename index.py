@@ -112,8 +112,8 @@ links = soup.find_all('link',{'rel':'next'})
 while soup.find_all('link',{'rel':'next'}) != []:
     #grab the next link
     next_page_link = links[0]['href']
-    print('-'*100)
-    print(next_page_link)
+    # print('-'*100)
+    # print(next_page_link)
 
     # request the next page
     response = requests.get(url = next_page_link)
@@ -124,3 +124,4 @@ while soup.find_all('link',{'rel':'next'}) != []:
     # find the links that will take us to the next page
     links = soup.find_all('link',{'rel':'next'})
 
+print(big_list)
